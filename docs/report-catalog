@@ -1,0 +1,49 @@
+# Report Catalog
+
+## Incident Reports
+1. **Open Incidents by Priority (Bar)**
+   - Table: incident
+   - Filter: active = true
+   - Group by: priority
+
+2. **Incidents Trend – Created (Time Series)**
+   - Table: incident
+   - Filter: opened_at last 30 days
+   - Trend by: opened_at
+   - Aggregate: count
+
+3. **Incidents Trend – Resolved (Time Series)**
+   - Table: incident
+   - Filter: resolved_at last 30 days
+   - Trend by: resolved_at
+   - Aggregate: count
+
+4. **Top Assignment Groups – Open Incidents (Bar)**
+   - Table: incident
+   - Filter: active = true
+   - Group by: assignment_group
+   - Sort: descending
+   - Limit: Top 10
+
+## Change Reports
+5. **Changes by State (Donut)**
+   - Table: change_request
+   - Filter: active = true (or state not in Closed/Cancelled)
+   - Group by: state
+
+6. **Emergency vs Normal Changes (Bar/Donut)**
+   - Table: change_request
+   - Filter: created last 90 days
+   - Group by: type
+
+## Problem Reports
+7. **Problems by Known Error (Bar)**
+   - Table: problem
+   - Filter: created last 90 days
+   - Group by: u_known_error (or known_error field)
+
+8. **Problems Trend (Time Series)**
+   - Table: problem
+   - Filter: opened_at last 90 days
+   - Trend by: opened_at
+   - Aggregate: count
