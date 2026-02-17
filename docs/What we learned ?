@@ -1,0 +1,7 @@
+# Lessons Learned
+
+- Interactive Filters make dashboards feel “PA-like” even without PA licensing
+- Designing KPI reports requires consistent filters and clean groupings
+- Separating exec vs team dashboards improves usability
+- Scheduled report packs help operational cadence and stakeholder communication
+- GitHub documentation + screenshots turns configuration work into interview-ready proof
