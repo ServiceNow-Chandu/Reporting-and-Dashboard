@@ -1,0 +1,23 @@
+# Dashboard Walkthrough
+
+## Dashboard 1: Ops Overview (Executive)
+Widgets:
+- Open Incidents by Priority
+- Incidents Trend (Created)
+- Incidents Trend (Resolved)
+- Changes by State
+- Problems by Known Error
+- Top Assignment Groups – Open Incidents
+
+Purpose:
+Provides leadership a quick operational snapshot and highlights workload, risk areas, and trends.
+
+## Dashboard 2: Service Desk Daily (Team)
+Widgets:
+- Open Incidents by Assignment Group
+- Incidents Created vs Resolved (trend comparison)
+- Top priorities open today
+- (Optional) My group’s open incidents using interactive filters
+
+Purpose:
+Helps service desk teams manage day-to-day queues and identify backlogs.
