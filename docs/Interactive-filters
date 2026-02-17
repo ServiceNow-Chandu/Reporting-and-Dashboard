@@ -1,0 +1,10 @@
+# Interactive Filters
+
+## Filters Used
+1. Assignment Group
+2. Priority
+3. Time Range (Last 7/30/90 days) – implemented via relative date conditions where supported
+
+## How Filters Are Used
+- Filters are added to both dashboards to enable slicing of all widgets simultaneously.
+- Filters improve self-service analytics for leaders and teams without needing PA.
