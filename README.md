@@ -1,30 +1,101 @@
 # Reporting Dashboard Lite – ServiceNow
 
-A portfolio project that demonstrates enterprise reporting and dashboarding in ServiceNow
-without Performance Analytics (PA). Includes KPI-style reports, executive dashboards,
-interactive filters, and scheduled report distribution.
+## Project Overview
 
-## Objective
-Build operational dashboards that help Service Desk and IT leadership monitor:
-- Incident volume and priority distribution
-- Incident trends (created vs resolved)
-- Change workload and status
-- Problem trends (including known errors)
+Reporting Dashboard Lite is a ServiceNow reporting project built to demonstrate operational dashboards, KPI-style reporting, interactive filters, and scheduled report distribution without using Performance Analytics.
 
-## Deliverables
-- 6–8 operational reports (Incident/Change/Problem)
-- 2 dashboards:
-  - Ops Overview (Executive)
-  - Service Desk Daily (Team)
-- Interactive filters for slicing data (Assignment Group, Priority, Time range)
-- Scheduled email “Daily Ops Snapshot” report pack
+This project uses native ServiceNow Reports and Dashboards to provide visibility into Incident, Change, and Problem Management processes.
 
-## Demo (60 seconds)
-1. Open **Ops Overview** dashboard → review trends & priority distribution
-2. Use **Interactive Filters** to slice by Assignment Group and Priority
-3. Open **Service Desk Daily** → validate “my group” view
-4. Show **Scheduled Report** email configuration (Daily Ops Snapshot)
+## Business Requirement
 
-## Notes
-- Built using Reports + Dashboards + Interactive Filters (no PA access required)
-- In PA-enabled environments, these KPIs can be upgraded to PA Indicators
+The goal of this project is to provide operational and leadership teams with clear visibility into ITSM performance using native ServiceNow reporting capabilities.
+
+## Features Implemented
+
+- Incident KPI reports
+- Change Management reports
+- Problem Management reports
+- Ops Overview Dashboard
+- Service Desk Daily Dashboard
+- Interactive Filters
+- Scheduled Report Pack
+- GitHub documentation and screenshots
+
+## Reports Created
+
+### 1. Open Incidents by Priority
+- Table: Incident
+- Type: Bar Chart
+- Filter: Active = True
+- Group by: Priority
+
+### 2. Incident Trend – Last 30 Days
+- Table: Incident
+- Type: Time Series
+- Filter: Opened At = Last 30 Days
+- Trend by: Opened At
+
+### 3. MTTR Proxy Report
+- Table: Incident
+- Filter: Resolved incidents
+- Purpose: Measures average resolution performance
+
+### 4. Changes by State
+- Table: Change Request
+- Type: Donut Chart
+- Group by: State
+
+### 5. Change Success Rate
+- Closed changes count
+- Successful closed changes count
+- Used to explain success percentage
+
+### 6. Problems by Known Error
+- Table: Problem
+- Type: Bar Chart
+- Group by: Known Error
+
+## Dashboards Created
+
+### Ops Overview Dashboard
+
+Widgets:
+- Open Incidents by Priority
+- Incident Trend
+- Changes by State
+- Problems by Known Error
+- Top Assignment Groups by Open Incidents
+
+### Service Desk Daily Dashboard
+
+Widgets:
+- Open Incidents by Assignment Group
+- Incidents Created vs Resolved
+- My Group’s Open Incidents
+
+## Interactive Filters
+
+Interactive filters were added to improve dashboard usability.
+
+Filters:
+- Assignment Group
+- Priority
+- Time Range
+
+## Scheduled Reports
+
+A scheduled report pack named Daily Ops Snapshot was configured to send operational reports by email.
+
+## GitHub Repository Structure
+
+```text
+09-reporting-dashboard-lite/
+├── README.md
+├── docs/
+│   ├── report-catalog.md
+│   ├── dashboard-walkthrough.md
+│   └── lessons-learned.md
+└── media/
+    ├── ops-dashboard.png
+    ├── service-desk-dashboard.png
+    └── scheduled-report.png
